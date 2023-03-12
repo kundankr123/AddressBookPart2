@@ -4,7 +4,17 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to master branch of Address Book problem part 2.");
+            //Console.WriteLine("Welcome to master branch of Address Book problem part 2.");
+
+            Addressbook addressbook = new Addressbook();
+            Contact newContact1 = new Contact("kundan", "kumar", "India", "7975461361", "kundannie2016@gmail.com");
+            Contact newContact2 = new Contact("vinay", "katare", "India", "87654321", "vinaykatare1234@gmail.com");
+            Contact newContact3 = new Contact("vinay", "katare", "India", "87654321", "vinaykatare1234@gmail.com");
+
+            addressbook.AddContact(newContact1);
+            addressbook.AddContact(newContact2);
+            addressbook.AddContact(newContact3);
+            addressbook.PrintContact();
         }
     }
 }

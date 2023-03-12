@@ -97,5 +97,15 @@ namespace AddressBook2
             return ContactsByCountry.ContainsKey(country) ? ContactsByCountry[country] : new List<Contact>();
         }
 
+
+        public void PrintContactCountbyCountry()
+        {
+            Console.WriteLine("Contact Count By Country:");
+
+            foreach (var keyValue in ContactsByCountry)
+            {
+                Console.WriteLine("{0}: {1}", keyValue.Key, keyValue.Value.Count);
+            }
+        }
     }
 }

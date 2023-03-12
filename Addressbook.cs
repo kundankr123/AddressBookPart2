@@ -41,5 +41,23 @@ namespace AddressBook2
                     ContactInfo[i].firstName, ContactInfo[i].lastName, ContactInfo[i].country, ContactInfo[i].phoneNumber, ContactInfo[i].email);
             }
         }
+
+        public void SearchbyCountry(string country)
+        {
+            var results = ContactInfo.Where(contact => contact != null && contact.country == country);
+
+            if (results.Any())
+            {
+                Console.WriteLine($"Contacts in {country}:");
+                foreach (var result in results)
+                {
+                    Console.WriteLine($"{result.firstName},{result.lastName},{result.country}, {result.phoneNumber}, {result.email}");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"No contacts found in {country}.");
+            }
+        }
     }
 }

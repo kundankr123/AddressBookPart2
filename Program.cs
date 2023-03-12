@@ -9,12 +9,15 @@
             Addressbook addressbook = new Addressbook();
             Contact newContact1 = new Contact("kundan", "kumar", "India", "7975461361", "kundannie2016@gmail.com");
             Contact newContact2 = new Contact("vinay", "katare", "India", "87654321", "vinaykatare1234@gmail.com");
-            Contact newContact3 = new Contact("vinay", "katare", "India", "87654321", "vinaykatare1234@gmail.com");
+            Contact newContact3 = new Contact("nihal", "srivatava", "usa", "87654321", "nihal123@gmail.com");
 
             addressbook.AddContact(newContact1);
             addressbook.AddContact(newContact2);
             addressbook.AddContact(newContact3);
-            addressbook.PrintContact();
+
+            addressbook.SearchbyCountry("usa");
+            addressbook.SearchbyCountry("India");
+            //addressbook.PrintContact();
         }
     }
 }

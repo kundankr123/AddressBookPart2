@@ -15,9 +15,17 @@
             addressbook.AddContact(newContact2);
             addressbook.AddContact(newContact3);
 
-            addressbook.SearchbyCountry("usa");
-            addressbook.SearchbyCountry("India");
+            //addressbook.SearchbyCountry("usa");
+            //addressbook.SearchbyCountry("India");
             //addressbook.PrintContact();
+
+            string country = "India";
+            List<Contact> contactInCountry = addressbook.GetContactsbyCountry(country);
+            Console.WriteLine("\nContacts in {0}:", country);
+            foreach (var contact in contactInCountry)
+            {
+                Console.WriteLine("{0} {1}", contact.firstName, contact.lastName);
+            }
         }
     }
 }
